@@ -1,0 +1,18 @@
+package za.co.antenna.service;
+
+import za.co.antenna.dtos.FileImageMeasurementPersistRequest;
+import za.co.antenna.dtos.FileImageMeasurementPersistResponse;
+import za.co.antenna.dtos.FileImageMeasurementRetrieveMultipleResponse;
+import za.co.antenna.exceptions.ServiceFailedException;
+
+public interface FileImageMeasurementService {
+	public FileImageMeasurementRetrieveMultipleResponse getFileImageMeasurementsByAntennaCode(String antennaCode, String orderBy) throws ServiceFailedException;
+
+	public FileImageMeasurementRetrieveMultipleResponse getAllFileImageMeasurements(String orderBy) throws ServiceFailedException;;
+
+	public FileImageMeasurementPersistResponse deleteFileImageMeasurementsByAntennaCode(String antennaCode) throws ServiceFailedException;
+
+	public FileImageMeasurementPersistResponse insertFileImageMeasurementRecord(FileImageMeasurementPersistRequest request) throws ServiceFailedException;
+
+	public FileImageMeasurementPersistResponse publishFileImageMeasurements(String antennaCode) throws ServiceFailedException;
+}

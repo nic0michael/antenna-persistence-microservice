@@ -1,0 +1,18 @@
+package za.co.antenna.servicemanagers;
+
+import za.co.antenna.dtos.FileImageMeasurementPersistRequest;
+import za.co.antenna.dtos.FileImageMeasurementPersistResponse;
+import za.co.antenna.dtos.FileImageMeasurementRetrieveMultipleRequest;
+import za.co.antenna.dtos.FileImageMeasurementRetrieveMultipleResponse;
+
+public interface FileImageMeasurementServiceManager {
+	public FileImageMeasurementRetrieveMultipleResponse getFileImageMeasurementsByAntennaCode(FileImageMeasurementRetrieveMultipleRequest request);
+
+	public FileImageMeasurementRetrieveMultipleResponse getAllFileImageMeasurements(FileImageMeasurementRetrieveMultipleRequest request);
+
+	public FileImageMeasurementPersistResponse deleteFileImageMeasurementsByAntennaCode(FileImageMeasurementPersistRequest request);
+
+	public FileImageMeasurementPersistResponse insertFileImageMeasurementRecord(FileImageMeasurementPersistRequest request);
+
+	public FileImageMeasurementPersistResponse publishFileImageMeasurements(FileImageMeasurementPersistRequest request);
+}
